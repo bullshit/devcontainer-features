@@ -13,12 +13,14 @@ jobs:
     strategy:
       matrix:
         features:
-          - color
-          - hello
+          - packwiz
         baseImage:
+          # - alpine:latest
           - debian:latest
-          - ubuntu:latest
-          - mcr.microsoft.com/devcontainers/base:ubuntu
+          # - ubuntu:latest
+          # - mcr.microsoft.com/devcontainers/base:alpine
+          - mcr.microsoft.com/devcontainers/base:debian
+          # - mcr.microsoft.com/devcontainers/base:ubuntu
     steps:
       - uses: actions/checkout@v4
 
@@ -34,8 +36,7 @@ jobs:
     strategy:
       matrix:
         features:
-          - color
-          - hello
+          - packwiz
     steps:
       - uses: actions/checkout@v4
 
